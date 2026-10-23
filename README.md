@@ -122,6 +122,51 @@ The program successfully demonstrates how a copy constructor initializes a new o
 UniSystem provides a practical introduction to constructors, copy constructors, and destructors in C++. It helps beginners understand object copying and object lifecycle management.
 
 ---
+---
+
+# Program 2: Matrix Operations Using Operator Overloading
+
+## Aim
+
+To develop a C++ program that demonstrates operator overloading for performing matrix addition, subtraction, multiplication, element access, and matrix comparison.
+
+## Description
+
+This program implements a `Matrix` class to perform operations on two 2×2 matrices using operator overloading. It overloads the `+`, `-`, `*`, `==`, `[]`, and `<<` operators to simplify matrix calculations and output.
+
+The program also uses assertions to verify the correctness of the matrix operations.
+
+## Technologies Used
+
+* Programming Language: C++
+* Header Files: `iostream`, `cassert`
+* Compiler: GCC (g++)
+* Platform: OnlineGDB
+
+## Concepts Covered
+
+* Classes and Objects
+* Encapsulation
+* Operator Overloading
+* Friend Functions
+* Matrix Addition and Subtraction
+* Matrix Multiplication
+* Equality Comparison
+* Array Indexing Operator
+* Assertions and Unit Testing
+
+## Tools Used
+
+* OnlineGDB: To write, compile, and execute the program.
+* GitHub: To store and share the source code.
+* Markdown: To document the project.
+
+## How to Run
+
+1. Open the `matrix.cpp` file in the repository.
+2. Copy the source code.
+3. Open the OnlineGDB C++ Compiler.
+
 
 
 
