@@ -673,6 +673,137 @@ This project demonstrates the implementation of copy and move semantics in C++ u
 
 The program also demonstrates perfect forwarding and compares the execution times of copy and move operations. These concepts help improve understanding of resource management, object ownership, and efficient programming in modern C++.
 
+Program 9# Enhanced Event Notification System in C++
+
+## Aim
+
+To develop an event notification system in C++ using the Observer, Factory, and Singleton design patterns, with additional features for subscriber management, event tracking, and automatic memory management.
+
+## Description
+
+This project implements a notification system that delivers event messages to email and SMS subscribers.
+
+The Observer Pattern allows multiple subscribers to receive notifications when an event occurs. The Factory Pattern creates notification objects based on the requested type, while the Singleton Pattern ensures that only one EventManager instance exists.
+
+The system also supports unsubscribing users, tracking the total number of triggered events, and displaying the number of active subscribers. Smart pointers are used to manage object lifetimes automatically.
+
+## Technologies Used
+
+* **Programming Language:** C++
+* **Compiler:** GCC (g++)
+* **IDE/Editor:** Visual Studio Code
+* **Libraries:** `<iostream>`, `<vector>`, `<memory>`, `<string>`, and `<algorithm>`
+
+## Features
+
+* **Email Notifications:** Sends event messages to email subscribers through console output.
+* **SMS Notifications:** Sends event messages to SMS subscribers through console output.
+* **Subscribe:** Adds observers to the notification system.
+* **Unsubscribe:** Removes observers from future notifications.
+* **Event Counter:** Tracks the total number of events triggered.
+* **Subscriber Count:** Displays the number of active subscribers.
+* **Factory-Based Object Creation:** Creates email and SMS notification objects.
+* **Singleton Event Manager:** Maintains a single EventManager instance.
+* **Smart Pointer Management:** Uses `shared_ptr` for automatic resource management.
+* **Dynamic Notification Delivery:** Sends messages only to currently subscribed observers.
+
+## Concepts Used
+
+### 1. Observer Pattern
+
+Defines a common interface for observers and notifies all subscribed observers when an event occurs.
+
+### 2. Factory Pattern
+
+Creates notification objects based on the specified type, such as EMAIL or SMS.
+
+### 3. Singleton Pattern
+
+Ensures that only one instance of the EventManager exists throughout the program.
+
+### 4. Inheritance
+
+The EmailNotification and SMSNotification classes inherit from the Observer interface.
+
+### 5. Polymorphism
+
+The `notify()` function is overridden to provide different notification behaviors for email and SMS.
+
+### 6. Smart Pointers
+
+The `shared_ptr` smart pointer manages the lifetime of notification objects automatically.
+
+### 7. STL Vector
+
+The `vector` container stores and manages the list of subscribed observers.
+
+### 8. STL Algorithm
+
+The `find()` function from `<algorithm>` locates a subscriber before removing it.
+
+### 9. Encapsulation
+
+Private data members and public member functions help organize the program and control access to internal data.
+
+### 10. Event Tracking
+
+An integer counter records the number of events triggered by the EventManager.
+
+## Sample Output
+
+```text
+--- Subscribing Users ---
+Subscriber added successfully.
+Subscriber added successfully.
+Active Subscribers: 2
+
+Event #1 Triggered: College cultural fest starts tomorrow!
+Sending Notifications...
+Email sent to student@example.com: College cultural fest starts tomorrow!
+SMS sent to 9123456780: College cultural fest starts tomorrow!
+
+--- Unsubscribing SMS User ---
+Subscriber removed successfully.
+Active Subscribers: 1
+
+Event #2 Triggered: Project submission deadline is Friday!
+Sending Notifications...
+Email sent to student@example.com: Project submission deadline is Friday!
+
+Total Events Triggered: 2
+```
+
+## How to Compile and Run
+
+### Step 1: Compile the Program
+
+```bash
+g++ notification_system.cpp -o notification_system
+```
+
+### Step 2: Run the Program
+
+**Windows:**
+
+```bash
+.\notification_system.exe
+```
+
+**Linux/macOS:**
+
+```bash
+./notification_system
+```
+
+## Conclusion
+
+This project demonstrates how design patterns can be combined to create a modular and maintainable notification system in C++. The Observer Pattern enables event-based notifications, the Factory Pattern simplifies object creation, and the Singleton Pattern provides a single event manager.
+
+The additional subscription management and event tracking features make the system more flexible. Smart pointers simplify memory management, while the use of STL containers and algorithms supports efficient subscriber management.
+
+**Note:** Email and SMS notifications are simulated through console output. The program does not send actual emails or SMS messages.
+
+
 
 
 
