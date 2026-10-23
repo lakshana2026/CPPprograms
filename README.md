@@ -500,6 +500,69 @@ Program completed successfully.
 
 This program demonstrates RAII and three approaches to resource management in C++: a custom smart pointer, `unique_ptr`, and `shared_ptr`. It explains how constructors and destructors manage resource lifetimes and how smart pointers help reduce memory-management errors through automatic cleanup.
 
+Program 7-# Bank Account Exception Handling in C++
+
+## Aim
+
+To develop a simple bank account management system using C++ that demonstrates custom exception handling for invalid transaction amounts and insufficient funds during deposit and withdrawal operations.
+
+## Description
+
+This project implements a basic banking system using object-oriented programming in C++. It allows users to deposit and withdraw money while maintaining the account balance.
+
+Custom exception classes are created to handle errors such as withdrawing more money than the available balance or entering a zero or negative transaction amount. The program uses `try`, `throw`, and `catch` statements to handle exceptions and ensure that unsuccessful transactions do not modify the account balance.
+
+## Technologies Used
+
+* **Programming Language:** C++
+* **Compiler:** GCC (g++)
+* **IDE/Editor:** Visual Studio Code
+* **Standard Library:** `<iostream>`, `<string>`, and `<stdexcept>`
+
+## Features
+
+* Create a bank account with an account holder's name and initial balance.
+* Deposit money into the account.
+* Withdraw money from the account.
+* Validate deposit and withdrawal amounts.
+* Detect insufficient funds during withdrawals.
+* Handle errors using custom exceptions.
+* Display initial and final account details.
+* Prevent unsuccessful transactions from modifying the account balance.
+
+## Concepts Used
+
+* **Object-Oriented Programming (OOP):** Organizes the program using classes and objects.
+* **Classes and Objects:** Implements the `BankAccount` class to manage account details and transactions.
+* **Encapsulation:** Keeps account details private and provides public methods to access and modify the balance.
+* **Inheritance:** Derives custom exception classes from the base `BankException` class.
+* **Exception Handling:** Uses `try`, `throw`, and `catch` to handle runtime errors.
+* **Custom Exceptions:** Implements `InsufficientFundsException` and `InvalidAmountException`.
+* **Function Overriding:** Overrides the `what()` function to return custom error messages.
+* **Validation:** Checks transaction amounts before modifying the account balance.
+
+## Sample Output
+
+```text
+Initial Account Details:
+Account Holder: Rahul
+Balance: Rs. 6000
+
+Depositing Rs. 1500...
+Withdrawing Rs. 2500...
+Withdrawing Rs. 10000...
+Error: Insufficient balance for withdrawal.
+
+Final Account Details:
+Account Holder: Rahul
+Balance: Rs. 5000
+```
+
+## Conclusion
+
+This project demonstrates the effective use of exception handling and object-oriented programming in C++. Custom exceptions help identify invalid transactions and insufficient funds. By validating transactions before updating the balance, the program maintains account consistency and demonstrates reliable error-handling practices in a basic banking application.
+
+
 
 
 
