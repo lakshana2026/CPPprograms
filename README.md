@@ -562,6 +562,117 @@ Balance: Rs. 5000
 
 This project demonstrates the effective use of exception handling and object-oriented programming in C++. Custom exceptions help identify invalid transactions and insufficient funds. By validating transactions before updating the balance, the program maintains account consistency and demonstrates reliable error-handling practices in a basic banking application.
 
+Program 8- String Copy and Move Semantics in C++
+## Aim
+
+To implement a custom String class in C++ and demonstrate copy semantics, move semantics, perfect forwarding, and performance benchmarking using dynamic memory allocation.
+
+## Description
+
+This project implements a custom `String` class that manages character data using dynamically allocated memory.
+
+It demonstrates how copy and move operations work in C++. The copy constructor creates an independent copy of the string, while the move constructor transfers ownership of the allocated memory without copying the entire string.
+
+The program also implements copy and move assignment operators, demonstrates perfect forwarding using a function template, and measures the execution time of repeated copy and move operations.
+
+## Technologies Used
+
+* **Programming Language:** C++
+* **Compiler:** GCC (g++)
+* **IDE/Editor:** Visual Studio Code
+* **Libraries:** `<iostream>`, `<cstring>`, `<chrono>`, and `<utility>`
+
+## Features
+
+* Custom String class with dynamic memory allocation.
+* Copy constructor for creating independent string copies.
+* Move constructor for transferring resource ownership.
+* Copy assignment operator for copying existing string objects.
+* Move assignment operator for transferring resources between existing objects.
+* Perfect forwarding using templates and `std::forward`.
+* Automatic memory cleanup using a destructor.
+* Performance benchmarking of copy and move operations.
+* Output demonstrations for copy assignment, move assignment, and perfect forwarding.
+
+## Concepts Used
+
+### 1. Dynamic Memory Allocation
+
+Uses `new[]` to allocate memory for string data and `delete[]` to release it.
+
+### 2. Copy Constructor
+
+Creates a new string object with its own memory allocation and copies the original string's contents.
+
+### 3. Move Constructor
+
+Transfers the pointer from an existing string object to a new object, avoiding a separate allocation for the moved string.
+
+### 4. Copy Assignment Operator
+
+Copies the contents of one existing string object into another existing object.
+
+### 5. Move Assignment Operator
+
+Transfers ownership of the allocated memory from one existing object to another.
+
+### 6. Destructor
+
+Automatically releases the dynamically allocated memory when a string object is destroyed.
+
+### 7. Perfect Forwarding
+
+Uses a function template with `T&&` and `std::forward<T>()` to preserve the value category of the argument.
+
+### 8. Performance Benchmarking
+
+Uses the `<chrono>` library to measure the time taken by repeated copy and move operations.
+
+### 9. Resource Management
+
+Demonstrates how a class can manage dynamically allocated memory and transfer ownership safely.
+
+## Sample Output
+
+```text
+Copy Assignment Result: This is a custom string demonstrating copy and move semantics in C++.
+Move Assignment Result: Move Assignment Example
+Perfect Forwarding Result: Perfect Forwarding Example
+
+Copy Operation Time: 8 milliseconds
+Move Operation Time: 5 milliseconds
+```
+
+**Note:** The execution times shown are examples. Actual timings depend on the system, compiler optimizations, and runtime environment.
+
+## How to Compile and Run
+
+### Step 1: Compile
+
+```bash
+g++ string_semantics.cpp -o string_semantics
+```
+
+### Step 2: Run
+
+**Windows:**
+
+```bash
+.\string_semantics.exe
+```
+
+**Linux/macOS:**
+
+```bash
+./string_semantics
+```
+
+## Conclusion
+
+This project demonstrates the implementation of copy and move semantics in C++ using a custom String class. It explains how constructors, assignment operators, and destructors manage dynamically allocated memory.
+
+The program also demonstrates perfect forwarding and compares the execution times of copy and move operations. These concepts help improve understanding of resource management, object ownership, and efficient programming in modern C++.
+
 
 
 
