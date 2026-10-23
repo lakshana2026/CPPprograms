@@ -222,6 +222,56 @@ The program also uses assertions to verify the correctness of the matrix operati
 1. Open the `matrix.cpp` file in the repository.
 2. Copy the source code.
 3. Open the OnlineGDB C++ Compiler.
+## Program 4: Stack and Queue Performance Comparison
+
+### Aim
+
+To implement stack and queue data structures using C++ templates and compare their performance with the built-in Standard Template Library (STL) stack and queue.
+
+### Description
+
+This program implements custom stack and queue data structures using arrays and compares their execution times with the corresponding STL containers. It performs insertion and deletion operations on both custom and built-in data structures.
+
+The program uses C++ templates to support generic data types and the `chrono` library to measure execution time in microseconds. It also includes functions to check whether a container is empty and determine its current size.
+
+### Technologies Used
+
+* Programming Language: C++
+* Libraries: `<iostream>`, `<stack>`, `<queue>`, `<chrono>`
+* Platform: OnlineGDB / C++ Compiler
+
+### Concepts Covered
+
+* Stack and Queue Data Structures
+* C++ Templates
+* Array-Based Implementation
+* Standard Template Library (STL)
+* Insertion and Deletion Operations
+* Execution Time Measurement
+* Performance Comparison
+* Size and Empty-State Checking
+
+### Features
+
+* Implements a custom stack using an array.
+* Implements a custom queue using an array.
+* Compares custom implementations with STL containers.
+* Measures execution time for insertion and deletion operations.
+* Displays container size and empty status.
+* Uses templates for reusable, generic code.
+
+### How to Run
+
+1. Open the program in a C++ compiler such as OnlineGDB.
+2. Copy and paste the source code.
+3. Select C++ as the programming language.
+4. Compile and run the program.
+5. Observe the container sizes, empty status, and execution times.
+
+### Expected Output
+
+The program displays the execution times for push and pop operations on stacks and enqueue and dequeue operations on queues. It also displa
+
 
 
 
