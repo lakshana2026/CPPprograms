@@ -373,6 +373,133 @@ Students below 50 have been removed.
 ## 10. Conclusion
 
 The Student Grade Analyzer demonstrates the effective use of C++ STL algorithms and lambda expressions to automate student data processing. It provides practical experience with vectors, sorting, filtering, grade assignment, and statistical calculations while promoting efficient and readable programming.
+# Smart Pointers and RAII in C++
+
+## 1. Aim
+
+To demonstrate Resource Acquisition Is Initialization (RAII) and memory management in C++ using a custom smart pointer, `unique_ptr`, and `shared_ptr`.
+
+## 2. Description
+
+This program demonstrates different approaches to resource management in C++. It implements a custom smart pointer using RAII and compares it with the standard smart pointers provided by the C++ Standard Library.
+
+The program uses a `Resource` class to demonstrate resource acquisition, usage, and automatic release. It illustrates how destructors manage resource cleanup, how `unique_ptr` provides exclusive ownership, and how `shared_ptr` enables multiple pointers to share ownership of a resource.
+
+## 3. Technologies Used
+
+* Programming Language: C++
+* Compiler: GCC
+* Libraries: `<iostream>`, `<memory>`
+* C++ Standard: C++14 or later
+* Platform: OnlineGDB / Terminal / C++ Compiler
+
+## 4. Concepts Covered
+
+* Resource Acquisition Is Initialization (RAII)
+* Smart Pointers
+* Custom Smart Pointer Implementation
+* `unique_ptr`
+* `shared_ptr`
+* Dynamic Memory Management
+* Constructors and Destructors
+* Operator Overloading
+* Exclusive and Shared Ownership
+* Reference Counting
+
+## 5. Features
+
+* Implements a custom smart pointer using RAII.
+* Demonstrates automatic resource acquisition and release.
+* Uses `unique_ptr` for exclusive resource ownership.
+* Uses `shared_ptr` to share a resource between multiple pointers.
+* Displays the shared pointer reference count.
+* Prevents copying of the custom smart pointer to avoid double deletion.
+
+## 6. Working Principle
+
+### Manual RAII Smart Pointer
+
+A custom class manages a dynamically allocated resource and releases it through its destructor when the object goes out of scope.
+
+### Unique Pointer
+
+The `unique_ptr` manages a resource with exclusive ownership. The resource is automatically released when the smart pointer goes out of scope.
+
+### Shared Pointer
+
+The `shared_ptr` allows multiple pointers to share ownership of the same resource. The resource is released when the last owning pointer is destroyed.
+
+## 7. Steps to Run
+
+### Using OnlineGDB
+
+1. Open the OnlineGDB C++ Compiler.
+2. Select C++ as the programming language.
+3. Copy and paste the source code into the editor.
+4. Click the Run button.
+5. Observe the output showing resource acquisition, usage, and release.
+
+### Using a Terminal
+
+**Step 1:** Save the source code as `smart_pointer.cpp`.
+
+**Step 2:** Open a terminal in the folder containing the file.
+
+**Step 3:** Compile the program using GCC:
+
+```bash
+g++ -std=c++14 -g smart_pointer.cpp -o smart_pointer
+```
+
+**Step 4:** Run the program.
+
+On Windows:
+
+```bash
+smart_pointer.exe
+```
+
+On Linux:
+
+```bash
+./smart_pointer
+```
+
+## 8. Expected Output
+
+```text
+----- Manual RAII Smart Pointer -----
+Resource acquired
+Resource is being used
+Resource released
+Manual smart pointer destroyed
+
+----- unique_ptr -----
+Resource acquired
+Resource is being used
+Resource released
+
+----- shared_ptr -----
+Resource acquired
+Resource is being used
+Shared Pointer Count: 2
+Resource released
+
+Program completed successfully.
+```
+
+## 9. Applications
+
+* Automatic memory management
+* Resource handling in C++ applications
+* Preventing memory leaks
+* Managing dynamically allocated objects
+* Understanding ownership and object lifetimes
+
+## 10. Conclusion
+
+This program demonstrates RAII and three approaches to resource management in C++: a custom smart pointer, `unique_ptr`, and `shared_ptr`. It explains how constructors and destructors manage resource lifetimes and how smart pointers help reduce memory-management errors through automatic cleanup.
+
 
 
 
