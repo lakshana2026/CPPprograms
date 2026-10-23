@@ -803,6 +803,127 @@ The additional subscription management and event tracking features make the syst
 
 **Note:** Email and SMS notifications are simulated through console output. The program does not send actual emails or SMS messages.
 
+Program 10-# Multithreaded Producer-Consumer System in C++
+
+## Aim
+
+To implement the Producer-Consumer problem using multithreading and synchronization mechanisms in C++, with multiple consumer threads and a bounded shared buffer.
+
+## Description
+
+This project demonstrates the Producer-Consumer problem, a classic example of concurrent programming.
+
+A producer thread generates items and adds them to a shared queue. Two consumer threads independently retrieve and process the items. The buffer has a fixed capacity of five items, ensuring that the producer waits whenever the buffer is full.
+
+Mutexes protect shared resources, while condition variables coordinate communication between producer and consumer threads. Atomic variables track the number of items produced and consumed and indicate when production has finished.
+
+## Technologies Used
+
+* **Programming Language:** C++
+* **Compiler:** GCC (g++)
+* **IDE/Editor:** Visual Studio Code
+* **Libraries:** `<iostream>`, `<thread>`, `<mutex>`, `<condition_variable>`, `<queue>`, `<atomic>`, and `<chrono>`
+
+## Features
+
+* Produces ten items using a producer thread.
+* Uses two consumer threads to process items concurrently.
+* Implements a bounded buffer with a capacity of five items.
+* Prevents the producer from adding items when the buffer is full.
+* Uses condition variables to coordinate thread execution.
+* Protects shared queue operations using a mutex.
+* Tracks the total number of items produced and consumed.
+* Displays the number of items remaining in the buffer.
+* Ensures all threads complete before displaying final statistics.
+
+## Concepts Used
+
+### 1. Multithreading
+
+Uses multiple threads to execute the producer and consumer functions concurrently.
+
+### 2. Producer-Consumer Problem
+
+Demonstrates communication between a producer that generates items and consumers that retrieve them from a shared buffer.
+
+### 3. Mutex
+
+Uses `mutex` to protect the shared queue and prevent simultaneous modifications.
+
+### 4. Condition Variables
+
+Uses `condition_variable` to make threads wait until the buffer state allows them to continue.
+
+### 5. Atomic Variables
+
+Uses `atomic<int>` to track production and consumption counts and `atomic<bool>` to indicate when production has finished.
+
+### 6. STL Queue
+
+Uses `queue<int>` as the shared buffer for storing produced items.
+
+### 7. Bounded Buffer
+
+Limits the buffer to five items and makes the producer wait when it reaches capacity.
+
+### 8. Thread Synchronization
+
+Uses `join()` to ensure that the main thread waits for the producer and both consumers to finish.
+
+### 9. Lambda Expressions
+
+Uses lambda expressions as predicates in condition-variable wait operations.
+
+## Sample Output
+
+```text
+Producer-Consumer System Started
+
+Produced: 1
+Consumer 1 consumed: 1
+Produced: 2
+Consumer 2 consumed: 2
+...
+Produced: 10
+Consumer 2 consumed: 10
+
+--- Final Statistics ---
+Total Items Produced: 10
+Total Items Consumed: 10
+Items Remaining in Buffer: 0
+
+Producer-Consumer System Completed
+```
+
+**Note:** The order of producer and consumer messages varies because the threads execute concurrently.
+
+## How to Compile and Run
+
+### Step 1: Compile the Program
+
+```bash
+g++ producer_consumer.cpp -o producer_consumer -std=c++11 -pthread
+```
+
+### Step 2: Run the Program
+
+**Windows (MinGW GCC):**
+
+```bash
+.\producer_consumer.exe
+```
+
+**Linux:**
+
+```bash
+./producer_consumer
+```
+
+## Conclusion
+
+This project demonstrates the implementation of a synchronized Producer-Consumer system using C++ multithreading. The bounded buffer prevents unlimited queue growth, while mutexes and condition variables coordinate access to shared resources. Multiple consumers improve concurrency, and atomic counters provide useful statistics about the system's operation.
+
+
 
 
 
