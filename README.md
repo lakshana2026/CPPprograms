@@ -222,6 +222,7 @@ The program also uses assertions to verify the correctness of the matrix operati
 1. Open the `matrix.cpp` file in the repository.
 2. Copy the source code.
 3. Open the OnlineGDB C++ Compiler.
+   
 ## Program 4: Stack and Queue Performance Comparison
 
 ### Aim
@@ -269,8 +270,113 @@ The program uses C++ templates to support generic data types and the `chrono` li
 5. Observe the container sizes, empty status, and execution times.
 
 ### Expected Output
+The program displays the remaining students' names, marks, and grades in descending order of marks.
+It also displays the total marks, average marks, number of students scoring 75 or above, and the topper's details.
 
-The program displays the execution times for push and pop operations on stacks and enqueue and dequeue operations on queues. It also displa
+Conclusion
+
+This program demonstrates the practical application of C++ STL algorithms and lambda expressions for efficient data processing. It provides experience in sorting, filtering, transforming, and analyzing student records using modern C++ programming techniques.
+
+# Student Grade Analyzer Using STL Algorithms and Lambda Expressions
+
+## 1. Aim
+
+To develop a Student Grade Analyzer using C++ STL algorithms and lambda expressions to process student records, assign grades, sort marks, and calculate academic performance statistics.
+
+## 2. Description
+
+The Student Grade Analyzer is a C++ program that stores and processes student information, including names, marks, and grades. It uses Standard Template Library (STL) algorithms and lambda expressions to perform various operations efficiently.
+
+The program assigns grades based on marks, removes students scoring below 50, sorts the remaining students in descending order of marks, calculates total and average marks, counts students scoring 75 or above, and identifies the topper.
+
+## 3. Technologies Used
+
+* Programming Language: C++
+* Compiler: GCC / OnlineGDB C++ Compiler
+* Libraries: iostream, vector, algorithm, numeric, string
+* Platform: OnlineGDB and GitHub
+
+## 4. Concepts Covered
+
+* Standard Template Library (STL)
+* Lambda Expressions
+* Vectors
+* Sorting and Filtering
+* Iterators
+* Data Processing
+* Grade Assignment
+* Statistical Calculations
+
+## 5. STL Algorithms Used
+
+| Algorithm       | Purpose                                           |
+| --------------- | ------------------------------------------------- |
+| `transform()`   | Assigns grades based on student marks.            |
+| `remove_if()`   | Identifies students scoring below 50 for removal. |
+| `sort()`        | Sorts students in descending order of marks.      |
+| `accumulate()`  | Calculates the total marks.                       |
+| `count_if()`    | Counts students scoring 75 or above.              |
+| `max_element()` | Identifies the highest-scoring student.           |
+| `for_each()`    | Displays student details.                         |
+
+## 6. Features
+
+* Stores student records using a vector.
+* Automatically assigns grades based on marks.
+* Removes students scoring below 50.
+* Sorts student records by marks in descending order.
+* Calculates total and average marks.
+* Counts students scoring 75 or above.
+* Identifies the topper.
+* Uses lambda expressions with STL algorithms.
+
+## 7. Steps to Run
+
+### Using OnlineGDB
+
+1. Open the OnlineGDB C++ Compiler.
+2. Select C++ as the programming language.
+3. Copy and paste the program into the editor.
+4. Click the **Run** button.
+5. View the student records and performance statistics in the output window.
+
+### Using GitHub
+
+1. Create a repository on GitHub.
+2. Upload the C++ source file, for example, `student_grade_analyzer.cpp`.
+3. Create or open the `README.md` file.
+4. Add this project documentation to the README.
+5. Commit the changes to save the project.
+
+Note: GitHub stores and displays your source code but does not execute a standard C++ program directly in the repository. Use an online compiler or a locally installed C++ compiler to run it.
+
+## 8. Sample Output
+
+```text
+Student Grade Analyzer
+----------------------
+Name    Mark    Grade
+Meena   96      A
+Divya   88      B
+Nithya  81      B
+Surya   73      C
+
+Total Marks: 338
+Average Mark: 84.5
+Students scoring 75 or above: 3
+Topper: Meena (96)
+Students below 50 have been removed.
+```
+
+##
+
+## 10. Conclusion
+
+The Student Grade Analyzer demonstrates the effective use of C++ STL algorithms and lambda expressions to automate student data processing. It provides practical experience with vectors, sorting, filtering, grade assignment, and statistical calculations while promoting efficient and readable programming.
+
+
+
+
 
 
 
